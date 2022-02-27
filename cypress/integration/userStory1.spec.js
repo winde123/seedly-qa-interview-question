@@ -4,11 +4,11 @@ import ReviewPage from './pageObject/reviewPage.js'
 context('User Story 1', () => {
   beforeEach(() => {
     cy.viewport(1280, 720)
-    cy.visit(Cypress.env('URI'))
+    cy.visit(Cypress.env('URIreviewpage'))
     cy.wait(3000)
   })
     it('validate url of review page',()=> {
-    cy.url().should('eq',Cypress.env('URI'))
+    cy.url().should('eq',Cypress.env('URIreviewpage'))
 })
 
     it('User should be able to enter input for all prod search bar',()=>{
