@@ -1,5 +1,6 @@
 {
     "env": {
-        "URI" : "https://seedly.sg/reviews"
+        "URIreviewpage" : "https://seedly.sg/reviews",
+        "URIsavingsacctpage" : "https://seedly.sg/reviews/savings-accounts"
     }
 }
