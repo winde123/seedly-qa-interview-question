@@ -18,6 +18,13 @@ class ReviewPage {
         cy.get('[href="/reviews/open-electricity-market/tuas-power"] > .sc-87a2472b-1').click();
         return this
     }
+    totalValidoptionsTuasSelector(){
+        return 'div.sc-87a2472b-0.iJDkZc>a[data-gtm=search-suggestion]'
+    }
+    validatingSearchFirstResultAviva(){
+        cy.get('a[href="/reviews/mortgage-insurance/aviva-myprotector-mortgage-insurance"]').first().should('have.text','AVIVA MyProtector Mortgage Insurance')
+        return this 
+    }
 }
 
 export default ReviewPage

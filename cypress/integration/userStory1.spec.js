@@ -5,7 +5,7 @@ context('User Story 1', () => {
   beforeEach(() => {
     cy.viewport(1280, 720)
     cy.visit(Cypress.env('URI'))
-    cy.wait(2000)
+    cy.wait(3000)
   })
     it('validate url of review page',()=> {
     cy.url().should('eq',Cypress.env('URI'))
@@ -37,6 +37,21 @@ context('User Story 1', () => {
       reviewPage.clickOnTuasOption();
       cy.url().should('contain','tuas')
 
+    })
+
+    it('The number of search results are valid', ()=>{
+      const reviewPage = new ReviewPage();
+      reviewPage.enterSearchTermMainNav('tuas');
+      cy.get(reviewPage.searchTermboxAllProd()).realClick();
+      cy.get(reviewPage.totalValidoptionsTuasSelector()).should('have.length',7)
+
+    })
+
+    it('User is able to see the search results for all products search bar',()=>{
+      const reviewPage = new ReviewPage();
+      reviewPage.enterSearchTermAllProd('Aviva');
+      reviewPage.validatingSearchFirstResultAviva();
+      
     })
     
 
