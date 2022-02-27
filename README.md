@@ -1,6 +1,6 @@
 # seedly-qa-interview-question
 For seedly interview
-# Share the steps on how you will plan out the QA for the above feature and user stories
+## Share the steps on how you will plan out the QA for the above feature and user stories
 
 | TC # | Use Case | TC name |
 | :-:  | :-: | :-: |
@@ -15,3 +15,16 @@ For seedly interview
 | 9 | 2 | Should display logo on ipad-2 screen and navigate to the second page |
 | 10 | 2 | Should display logo on samsung-note9 screen and navigate to the second page |
 
+###Thought process:
+* Identify the straighthrough scenarios and focused automating first . 
+* Identify any possible edge cases if possible . 
+
+## How to run the cypress Tests
+`npm test`
+
+## Difficulties that i have encountered 
+* The behavior of website is not congruent to the actual user behavior on a browser . I had to resort to an explicit wait to solve this . Given more time , I would have resorted to an implicit wait with alias on waiting for some of the seedly api calls to be done . 
+* Given the lack of time , I had to put the test data within the spec files and page object files . Ideally , i would like consolidate the test data under one folder . 
+
+## Additional plugins that i used:
+cypress-real-events/support
